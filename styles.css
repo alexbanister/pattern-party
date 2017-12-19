@@ -125,6 +125,32 @@ a {
   a:hover {
     cursor: pointer; }
 
+.flex-cards {
+  display: grid;
+  grid-template-columns: 25vw 25vw 25vw;
+  grid-auto-flow: row;
+  grid-gap: 1rem; }
+  .flex-cards .one-col, .flex-cards .two-col {
+    border: 1px solid #666666;
+    background: #D1D2D3; }
+  .flex-cards .one-col {
+    grid-column: span 1; }
+    .flex-cards .one-col h3 {
+      max-width: 25vw; }
+  .flex-cards .two-col {
+    grid-column: span 2; }
+    .flex-cards .two-col h3 {
+      max-width: auto; }
+  .flex-cards h3 {
+    background: #ffffff;
+    padding: 1rem;
+    border-bottom: 1px solid #666666;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+  .flex-cards .card-content {
+    min-height: 10rem; }
+
 @media (max-width: 750px) {
   html {
     font-size: .8rem; }
@@ -193,6 +219,16 @@ a {
   a {
     margin-top: 2rem;
     padding: 1.5rem;
-    width: 100%; } }
+    width: 100%; }
+
+  .flex-cards {
+    display: flex;
+    flex-direction: column; }
+    .flex-cards .one-col, .flex-cards .two-col {
+      margin: 1rem; }
+      .flex-cards .one-col h3, .flex-cards .two-col h3 {
+        max-width: 100%; }
+    .flex-cards .card-content {
+      min-height: 15rem; } }
 
 /*# sourceMappingURL=styles.css.map */
