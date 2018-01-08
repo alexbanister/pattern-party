@@ -57,7 +57,9 @@ section {
     background: #ffffff; }
 
 article {
-  margin: 2rem; }
+  margin: 2rem;
+  display: flex;
+  justify-content: center; }
   article .accordion {
     display: flex;
     flex-wrap: wrap; }
@@ -151,6 +153,85 @@ a {
   .flex-cards .card-content {
     min-height: 10rem; }
 
+.header-bar {
+  background: #D1D2D3;
+  padding: 1.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #666666;
+  font-size: .85rem; }
+  .header-bar .logo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    background: #F2F2F2;
+    border: 1px solid #000000; }
+  .header-bar input[type="checkbox"], .header-bar label {
+    display: none; }
+  .header-bar .nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .header-bar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1rem;
+    max-width: 100%; }
+  .header-bar li {
+    padding: 0 1rem; }
+  .header-bar input {
+    height: 3rem;
+    font-size: 1.25rem;
+    width: 10rem;
+    color: #666666;
+    background: #F2F2F2;
+    border: 1px solid #666666;
+    padding-left: .25rem; }
+  .header-bar input::placeholder {
+    padding-left: 2rem;
+    background: url("search.png");
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat; }
+
+@media (max-width: 910px) {
+  .header-bar {
+    flex-direction: column;
+    padding: 0; }
+    .header-bar .small-bar {
+      padding: 1rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .header-bar label {
+      display: inline;
+      text-align: right;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      text-transform: uppercase; }
+    .header-bar .nav, .header-bar ul {
+      flex-direction: column; }
+    .header-bar .nav {
+      background-color: #F2F2F2;
+      padding: 1rem; }
+    .header-bar ul {
+      width: 100%;
+      align-items: left;
+      padding: .5rem 0; }
+    .header-bar li {
+      padding: .5rem 1rem;
+      font-size: 1.25rem; }
+    .header-bar input {
+      width: 100%; }
+    .header-bar input[type="checkbox"]:checked + .nav {
+      display: none; } }
 @media (max-width: 750px) {
   html {
     font-size: .8rem; }
